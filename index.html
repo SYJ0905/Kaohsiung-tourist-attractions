@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高雄旅遊景點查詢</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="container text-center">
+                <h1>高雄旅遊資訊</h1>
+                <select id="selectDistrict" v-model="filter">
+                    <option value="" disabled>- -請選擇行政區- -</option>
+                    <option :value="item" v-for="(item, index) in filterZoneList">{{ item }}</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="hot-spot">
+            <div class="container">
+                <h2>熱門行政區</h2>
+                <ul>
+                    <li>
+                        <input type="button" value="苓雅區" class="hotZone1" @click="filter = '苓雅區'">
+                    </li>
+                    <li>
+                        <input type="button" value="三民區" class="hotZone2" @click="filter = '三民區'">
+                    </li>
+                    <li>
+                        <input type="button" value="新興區" class="hotZone3" @click="filter = '新興區'">
+                    </li>
+                    <li>
+                        <input type="button" value="鹽埕區" class="hotZone4" @click="filter = '鹽埕區'">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr />
+        
+        <div class="content">
+            <div class="container">
+                <h2 class="title text-center">{{ filter }}</h2>
+                <ul class="list">
+                    <li v-for="(item, index) in filterZone[currentPage]">
+                        <img :src="item.Picture1" alt="image">
+                        <span class="hotZoneName"></span>
+                        <div class="info">
+                            <p class="time">
+                                <i class="fas fa-clock text-primary"></i>{{ item.Opentime}}
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker text-warning"></i>{{ item.Add }}
+                            </p>
+                            <p class="contact">
+                                <i class="fas fa-mobile-alt text-info"></i>{{ item.Tel }}
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <nav class="my-5" aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item" :class="{ 'active' : currentPage == page -1 }" v-for="(page, index) in filterZone.length">
+                            <a class="page-link" href="#" @click.prevent="currentPage = page -1">{{ page }}</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="container text-center">
+                <h3>高雄旅遊網</h3>
+                <p>資料來源 : 高雄市政府</p>
+            </div>
+        </div>
+        
+        <div class="goTop">
+            <a href="#">
+                <img src="images/btn_goTop.png" alt="go-top">
+            </a>
+        </div>
+    </div>
+    
+    
+    <!-- <script src="js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/vue.js"></script>
+</body>
+</html>

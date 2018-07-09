@@ -1,0 +1,196 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 22px; }
+
+p {
+  font-size: 16px; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.text-center {
+  text-align: center; }
+
+hr {
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px dashed #559AC8; }
+
+.goTop {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  width: 24px;
+  height: 24px; }
+
+.header {
+  padding: 100px 0 200px 0;
+  background-image: url("../images/the-urban-landscape-1698285.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .header h1 {
+    margin-bottom: 70px;
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 3.89px; }
+  .header select {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 7px 4px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 3px solid #fff;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 1px;
+    cursor: pointer; }
+
+.hot-spot {
+  position: relative; }
+  .hot-spot:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .hot-spot .container {
+    position: relative;
+    top: -30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+  .hot-spot ul {
+    padding-left: 15px; }
+    .hot-spot ul:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .hot-spot li {
+    float: left;
+    margin-right: 20px;
+    border-radius: 5px; }
+    .hot-spot li input {
+      padding: 7px 10px;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer; }
+  .hot-spot .hotZone1 {
+    background-color: #8A82CC; }
+  .hot-spot .hotZone2 {
+    background-color: #FFA782; }
+  .hot-spot .hotZone3 {
+    background-color: #F5D005; }
+  .hot-spot .hotZone4 {
+    background-color: #559AC8; }
+  .hot-spot h2 {
+    font-size: 18px;
+    margin-bottom: 15px; }
+  .hot-spot a {
+    display: block;
+    padding: 10px 26px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff; }
+
+.content {
+  padding: 50px 0; }
+  .content .title {
+    font-size: 36px;
+    margin-bottom: 30px; }
+  .content .list:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .content .list img {
+    display: block;
+    width: 100%;
+    height: 347px; }
+  .content .list li {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 0 8px;
+    margin-bottom: 25px; }
+  .content .list span {
+    position: absolute;
+    left: 20px;
+    top: 62%;
+    font-size: 24px;
+    color: #fff; }
+  .content .list .info {
+    padding: 10px 15px;
+    background-color: #fff;
+    height: 140px;
+    line-height: 30px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+    .content .list .info img {
+      position: relative;
+      margin-right: 4px;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      top: 5px; }
+
+.footer {
+  padding: 25px 0;
+  background-color: #559AC8; }
+  .footer .container {
+    line-height: 30px; }
+  .footer h3 {
+    font-size: 14px;
+    color: #fff; }
+  .footer p {
+    font-size: 14px;
+    color: #FFD366; }
