@@ -55,7 +55,7 @@
                 <ul class="list">
                     <li v-for="(item, index) in filterZone[currentPage]">
                         <img :src="item.Picture1" alt="image">
-                        <span class="hotZoneName"></span>
+                        <span class="hotZoneName">{{ item.Name }}</span>
                         <div class="info">
                             <p class="time">
                                 <i class="fas fa-clock text-primary"></i>{{ item.Opentime}}
