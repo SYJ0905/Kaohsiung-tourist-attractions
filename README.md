@@ -1,7 +1,7 @@
 # Kaohsiung-tourist-attractions
 
 ## Demo
-https://yangjiesu.github.io/Kaohsiung-tourist-attractions/
+https://syj0905.github.io/Kaohsiung-tourist-attractions/
 
 ## Intro
 * 使用 Vue.js 加速開發
